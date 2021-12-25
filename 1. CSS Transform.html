@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web</title>
+    <style>
+      .box-container {
+        display: flex;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background: rgba(255, 255, 0, 0.7);
+      }
+      .box:hover {
+        /* width: 200px;
+        height: 200px; */
+
+        /* 크기변환 scale(1) 1 == 100% */
+        /* 회전 rotate(45deg)  */
+        /* width, height 변경과 달리 Reflow에서 해당하는 부분만 계산 */
+        /* transform: scale(1.5) rotate(45deg); */
+
+        /* 수평 방향 비틀기 skewX(45deg) */
+        /* 수직 방향 skewY(45deg) */
+        /* skew(수평, 수직) */
+        /* transform: skew(-15deg, -15deg); */
+
+        /* 이동 */
+        /* translateX, translateY, translateZ로 축별 이동 가능 */
+        /* transform: translate(30px, 30px); */
+
+        /* 기준점 변경 */
+        /* 초기 기준점은 중앙 */
+        /* 단어 조합으로 9방향 모두 가능 ex. left top */
+        /* %로 애매한 기준점도 가능 */
+        /* 0% 0%가 left top */
+        /* 픽셀로도 가능하나 퍼센트가 주로 사용 */
+        transform: scale(1.5) rotate(45deg);
+        transform-origin: 20% 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Transform</h1>
+    <div>
+      크기 변경, 회전, 이동 등 다양한 기능을 제공 일반 CSS 기능으로도 가능 BUT,
+      CSS 3 이후 CSS Transform을 이용해 편리하고 빠르게 작성 가능
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias
+      distinctio iure fugit provident sit, necessitatibus minus odio voluptates
+      at! Animi doloremque sunt ad cupiditate veritatis a ex cumque dolore?
+      Mollitia dolor magnam id iure, officia repellat quod iste pariatur earum
+      nulla sequi adipisci accusamus eligendi maiores, voluptas velit sint ab
+      voluptates dolores nesciunt nisi. Harum impedit quo fugit aspernatur
+      temporibus maiores doloribus eaque at nesciunt similique quas qui,
+      delectus ipsa! Soluta sed asperiores molestiae minus delectus tenetur odio
+      alias dolor fugit non corrupti, corporis ducimus sapiente velit nostrum
+      voluptatem molestias rem recusandae cum? Voluptatem tenetur placeat
+      reprehenderit laborum modi.
+    </p>
+    <div class="box-container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio quas,
+      quod eum tempore aspernatur ad neque soluta qui hic et iusto ab
+      consectetur quaerat ullam modi exercitationem mollitia dolores animi.
+      Corporis, iusto. Cupiditate autem ducimus debitis magni eligendi eum sit
+      doloribus illum, explicabo quas laboriosam quo, quam accusantium in iusto,
+      voluptatum incidunt distinctio laborum. Dolorem voluptas omnis optio
+      voluptates quaerat, dignissimos dolore eligendi unde voluptate? Ab totam,
+      quos tempore cumque ullam repellendus dicta reiciendis voluptas quia odio
+      tenetur veritatis. Quisquam, dolorem impedit, esse earum harum itaque
+      aperiam atque sapiente ratione ex dicta eaque magni quos provident,
+      voluptatum repellat! Dolores, distinctio.
+    </p>
+  </body>
+</html>
