@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+      @keyframes test {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(0px, 500px);
+        }
+        50% {
+          transform: translate(500px, 0);
+          background: red;
+        }
+        75% {
+          transform: translate(200px, 300px);
+        }
+        100% {
+          transform: translate(700px, 500px);
+        }
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background: #fff000;
+        border: 2px solid black;
+
+        /* transition과의 차이점
+        KEY FRAME을 설정할 수 있음 == 중간에 변화를 줄 수 있음 
+        animation: 키프레임 이름, 실행 시간, (속도), (딜레이), (반복)*/
+        /* linear: 등속, ease: 기본값
+        infinite: 무한반복 */
+        animation: test 2s ease 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      CSS로 애니메이션 주는 방법 <br />
+      1. Transition <br />
+      2. Animation
+    </div>
+
+    <h1>Animation</h1>
+    <div class="box">BOX</div>
+  </body>
+</html>
