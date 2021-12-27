@@ -34,10 +34,14 @@
         border: 2px solid black;
 
         /* transition과의 차이점
-        KEY FRAME을 설정할 수 있음 == 중간에 변화를 줄 수 있음 
-        animation: 키프레임 이름, 실행 시간, (속도), (딜레이), (반복)*/
-        /* linear: 등속, ease: 기본값
-        infinite: 무한반복 */
+        KEY FRAME을 설정할 수 있음 == 중간에 변화를 줄 수 있음
+        animation: 키프레임 이름, 실행 시간*/
+
+        /* animation-timing-function
+        /* linear: 등속, ease: 기본값, cubic-bezier로 수정 가능*/
+
+        /* animation-iteration-count
+        infinite: 무한반복, 숫자: 반복 횟수*/
         animation: test 2s ease 3;
       }
     </style>
