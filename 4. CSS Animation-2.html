@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+      @keyframes test {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(0px, 500px);
+        }
+        50% {
+          transform: translate(500px, 0);
+          background: azure;
+        }
+        75% {
+          transform: translate(200px, 300px);
+        }
+        100% {
+          transform: translate(700px, 500px);
+        }
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background: #fff000;
+        border: 2px solid black;
+
+        /* animation-direction */
+        /* infinite만 있으면 종료 후 처음으로 돌아가서 반복
+        뒤에 alternate를 추가하면 처음->종료->처음 형태로 자연스럽게 반복 */
+        /* reverse = 반대로
+        alternate = 시작 -> 종료 -> 시작 형태
+        alternate-reverse = 종료 -> 시작 -> 종료 */
+        /* animation: test 2s ease infinite alternate-reverse; */
+
+        /* animation-fill-mode */
+        /* 반복하지 않는 경우 박스는 처음으로 돌아감
+        => 종료 지점에 머무르게 하는 법 = forwards */
+        animation: test 3s ease forwards;
+      }
+
+      .box:hover {
+        /* animation-play-state 
+        기본값: running == 애니메이션 실행
+        paused: 일시 정지 */
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      CSS로 애니메이션 주는 방법 <br />
+      1. Transition <br />
+      2. Animation
+    </div>
+
+    <h1>Animation</h1>
+    <div class="box">BOX</div>
+  </body>
+</html>
