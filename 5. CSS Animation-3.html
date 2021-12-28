@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+      @keyframes spaceship-ani {
+        to {
+          background-position: -2550px 0;
+        }
+      }
+      .spaceship {
+        width: 150px;
+        height: 150px;
+        background: url("images/sprite_spaceship.png") no-repeat 0 0 / cover;
+        animation: spaceship-ani 1s infinite steps(17);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      CSS로 애니메이션 주는 방법 <br />
+      1. Transition <br />
+      2. Animation <br />
+      <br />
+    </div>
+
+    <div>Frame By Frame Animation</div>
+    <div>
+      전통적인 애니메이션 방식<br />
+      프레임마다 그려서 만드는 애니메이션
+    </div>
+
+    <div class="spaceshilp">x</div>
+  </body>
+</html>
