@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>FC Bayern</title>
+    <style>
+      @font-face {
+        font-family: "KIMM_Bold";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2")
+          format("woff2");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      html {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        background-color: black;
+        font-family: "KIMM_Bold";
+        width: 100%;
+        height: 100%;
+      }
+      main {
+        width: 100%;
+        height: 100%;
+      }
+
+      section {
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center;
+        line-height: 100vh;
+        font-size: 50px;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>안녕 난 섹션임</section>
+      <section>근데 이게 뭐하는 거냐</section>
+      <section>하 진짜</section>
+      <section>그냥 해봐야지 뭐</section>
+    </main>
+    <footer>Other Clubs</footer>
+  </body>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (elements) => {
+        elements.forEach((element) => {
+          if (element.isIntersecting) element.target.style.opacity = 1;
+          else element.target.style.opacity = 0;
+        });
+      },
+      {
+        threshold: 0.6,
+      }
+    );
+
+    let sections = document.querySelectorAll("section");
+    sections.forEach((e) => {
+      observer.observe(e);
+    });
+  </script>
+</html>
